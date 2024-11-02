@@ -24,6 +24,7 @@
       "@codeabien/playground": [
         "libs/bootcamps/feature-playground/src/index.ts"
       ],
+      "@codeabien/store": ["libs/store/src/index.ts"],
       "@codeabien/todos": ["libs/bootcamps/feature-todos/src/index.ts"],
       "@codeabien/ui": ["libs/bootcamps/ui/src/index.ts"],
       "@codeabien/videoplayer": [

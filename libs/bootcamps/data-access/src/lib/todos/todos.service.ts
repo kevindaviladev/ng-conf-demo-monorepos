@@ -1,4 +1,5 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { computed, inject, Injectable, signal } from '@angular/core';
 interface State {
   data: Array<{ id: string; title: string }>;
   loaded: boolean;
@@ -24,6 +25,7 @@ export class TodosService {
   loaded = computed(() => this.state().loaded);
   error = computed(() => this.state().error);
 
+  private http = inject(HttpClient);
   loadTodos() {
     this.state.set({ data: [], loading: true, loaded: false, error: null });
 
@@ -45,6 +47,10 @@ export class TodosService {
           error: null,
         });
       });
+  }
+
+  getMyTodosFromCourses() {
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
   }
 
 }

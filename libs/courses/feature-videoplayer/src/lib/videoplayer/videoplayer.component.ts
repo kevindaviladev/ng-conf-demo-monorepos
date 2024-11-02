@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CodeaBienStore } from '@codeabien/store';
 
 @Component({
   selector: 'lib-videoplayer',
@@ -8,4 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './videoplayer.component.html',
   styleUrl: './videoplayer.component.css',
 })
-export class VideoplayerComponent {}
+export class VideoplayerComponent {
+  store = inject(CodeaBienStore)
+
+}
