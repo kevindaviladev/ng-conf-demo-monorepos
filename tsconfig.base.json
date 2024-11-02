@@ -14,7 +14,22 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@codeabien/bootcamps": [
+        "libs/bootcamps/feature-playground/src/index.ts"
+      ],
+      "@codeabien/components": ["libs/components/src/index.ts"],
+      "@codeabien/courses-ui": ["libs/courses/ui/src/index.ts"],
+      "@codeabien/data-access": ["libs/bootcamps/data-access/src/index.ts"],
+      "@codeabien/playground": [
+        "libs/bootcamps/feature-playground/src/index.ts"
+      ],
+      "@codeabien/todos": ["libs/bootcamps/feature-todos/src/index.ts"],
+      "@codeabien/ui": ["libs/bootcamps/ui/src/index.ts"],
+      "@codeabien/videoplayer": [
+        "libs/courses/feature-videoplayer/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

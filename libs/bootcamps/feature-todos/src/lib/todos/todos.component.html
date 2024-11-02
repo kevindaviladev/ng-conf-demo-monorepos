@@ -1,0 +1,13 @@
+<button (click)="todosService.loadTodos()">Load Data</button>
+
+<div *ngIf="todosService.loading()">
+  Loading...
+</div>
+
+<div *ngIf="todosService.error()">
+  {{ todosService.error() }}
+</div>
+
+<ul *ngFor="let todo of todosService.data()">
+  {{ todo.id }} - {{ todo.title }}
+</ul>
